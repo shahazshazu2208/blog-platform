@@ -61,7 +61,20 @@ def get_post(id):
         return jsonify(result) , 200
     else:
         return jsonify({'error':'Post not found'}),404
-    
+
+@app.route('/posts/<int:id>' ,methods=['DELETE'])
+def delete_post(id):
+    conn = sqlite3.connect('blog.db')
+    cursor = conn.cursor()
+    cursor.execute('DELETE FROM posts WHERE id = ?', (id,))
+    conn.commit()
+    conn.close()
+
+    if cursor.rowcount>0:
+        return jsonify({'message':'Post Deleted'}),200
+    else:
+        return jsonify({'error':'Post not found'}),404
+
 if __name__ == '__main__':
     init_db()
     app.run(host='0.0.0.0',port=5000,debug=True)

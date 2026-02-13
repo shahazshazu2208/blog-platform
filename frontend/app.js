@@ -18,6 +18,7 @@ async function fetchPosts()
                             <p class="author">By: ${post[2]}</p>
                             <p class="content">${post[3]}</p>
                             <small>${post[4]}</small>
+                            <button class="delete-btn" onclick="deletePost(${post[0]})">Delete</button>
         `;
         postsContainer.appendChild(postDiv);
     });
@@ -41,6 +42,17 @@ async function createPost(event)
     );
     postForm.reset();
     fetchPosts();
+}
+
+async function deletePost(id)
+{
+    if(confirm('Are you sure you want to delete this post?'))
+    {
+        await fetch(API_URL + '/posts/' +id,{
+            method: 'DELETE'
+        });
+        fetchPosts();
+    }
 }
 
 postForm.addEventListener('submit',createPost);
