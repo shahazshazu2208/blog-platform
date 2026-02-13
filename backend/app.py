@@ -1,6 +1,3 @@
-print("=" * 50)
-print("APP.PY IS RUNNING!")
-print("=" * 50)
 from flask import Flask, request ,jsonify
 from flask_cors import CORS
 import sqlite3
