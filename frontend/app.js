@@ -14,10 +14,10 @@ async function fetchPosts()
         const postDiv = document.createElement('div');
         postDiv.className= 'post-card';
         postDiv.innerHTML = `
-                            <h3>${post[1]}</h3>
-                            <p class="author">By: ${post[2]}</p>
-                            <p class="content">${post[3]}</p>
-                            <small>${post[4]}</small>
+                            <h3>${post.title}</h3>
+                            <p class="author">By: ${post.author}</p>
+                            <p class="content">${post.content}</p>
+                            <small>${post.created_at}</small>
                             <button class="delete-btn" onclick="deletePost(${post[0]})">Delete</button>
         `;
         postsContainer.appendChild(postDiv);
