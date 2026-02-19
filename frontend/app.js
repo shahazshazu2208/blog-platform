@@ -18,7 +18,7 @@ async function fetchPosts()
                             <p class="author">By: ${post.author}</p>
                             <p class="content">${post.content}</p>
                             <small>${post.created_at}</small>
-                            <button class="delete-btn" onclick="deletePost(${post,id})">Delete</button>
+                            <button class="delete-btn" onclick="deletePost(${post.id})">Delete</button>
         `;
         postsContainer.appendChild(postDiv);
     });
