@@ -1,4 +1,4 @@
-const API_URL='http://localhost:5000';
+const API_URL='http://3.235.230.18:5000';
 
 const postForm=document.getElementById('postForm');
 const postsContainer=document.getElementById('postsContainer');
