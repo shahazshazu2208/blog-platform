@@ -62,7 +62,7 @@ def get_post(id):
 @app.route('/posts/<int:id>' ,methods=['DELETE'])
 def delete_post(id):
     conn = sqlite3.connect('blog.db')
-    cursor = conn.cursor()
+    cursor = conn.cursor(dictionary=True)
     cursor.execute('DELETE FROM posts WHERE id = ?', (id,))
     conn.commit()
     conn.close()
