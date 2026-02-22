@@ -1,4 +1,8 @@
+
 const API_URL='http://blog-alb-335972398.us-east-1.elb.amazonaws.com';
+=======
+const API_URL='http://http://blog-alb-335972398.us-east-1.elb.amazonaws.com/posts';
+
 
 const postForm=document.getElementById('postForm');
 const postsContainer=document.getElementById('postsContainer');
