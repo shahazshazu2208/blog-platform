@@ -1,5 +1,5 @@
 
-const API_URL='http://http://blog-alb-335972398.us-east-1.elb.amazonaws.com/posts';
+const API_URL='http://blog-alb-335972398.us-east-1.elb.amazonaws.com';
 
 
 const postForm=document.getElementById('postForm');
