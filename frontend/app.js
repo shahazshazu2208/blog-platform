@@ -1,4 +1,4 @@
-const API_URL='http://3.235.230.18:5000';
+const API_URL='http://blog-alb-335972398.us-east-1.elb.amazonaws.com';
 
 const postForm=document.getElementById('postForm');
 const postsContainer=document.getElementById('postsContainer');
